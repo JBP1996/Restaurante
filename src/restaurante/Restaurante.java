@@ -5,6 +5,7 @@
  */
 package restaurante;
 
+import controller.GestaoMesas;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -19,10 +20,15 @@ import view.FMesas;
  * @author JBP1996 Atec
  */
 public class Restaurante extends Application {
+    GestaoMesas gMesas;
     
     @Override
     public void start(Stage primaryStage) {
-        FMesas janela_Mesas = new FMesas(320,240);
+        
+        gMesas = new GestaoMesas();
+        
+        FMesas janela_Mesas = new FMesas(320,240, gMesas);
+        
         primaryStage.setScene(janela_Mesas);
         primaryStage.show();
     }

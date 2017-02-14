@@ -21,5 +21,7 @@ public class GestaoMesas {
     public void addMesa(int lugares,boolean fumador){
         Mesa m = new Mesa(lugares, _armesas.size(),fumador);
         _armesas.add(m);
+        
+        System.out.println("Numero de mesas no restaurante: "+_armesas.size());
     }
 }
